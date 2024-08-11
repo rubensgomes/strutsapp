@@ -13,7 +13,7 @@ git remote add origin "https://github.com/rubensgomes/${PROJ}"
 git push -u origin main
 ```
 
-Then, go to the [repo](https://github.com/rubensgomes/ex-lib) and create
+Then, go to the [repo](https://github.com/rubensgomes/strutsapp) and create
 a `release` branch. Click on the `drop-down` to `View all branches` and click
 on the `New branch` button.
 
