@@ -1,0 +1,27 @@
+############################ default ###########################################
+spring:
+  application:
+    name: "StrutsApp"
+
+logging:
+  group:
+    tomcat: "org.apache.catalina,org.apache.coyote,org.apache.tomcat"
+  level:
+    tomcat: "debug"
+    web: "trace"
+    com.rubensgomes.springstruts: "trace"
+    com.opensymphony.xwork2: "debug"
+    com.opensymphony.xwork2.ObjectFactory: "warn"
+    com.opensymphony.xwork2.config: "warn"
+    com.opensymphony.xwork2.ognl: "warn"
+    com.opensymphony.xwork2.util: "warn"
+    org.apache.catalina.loader: "warn"
+    org.apache.struts2: "debug"
+    org.apache.struts2.convention.PackageBasedActionConfigBuilder: "warn"
+    org.apache.tomcat.util.scan: "warn"
+
+server:
+  port: 8080
+  servlet:
+    context-path: "/"
+  shutdown: "graceful"
