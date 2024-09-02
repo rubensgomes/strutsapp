@@ -21,7 +21,7 @@ dependencyResolutionManagement {
 
     versionCatalogs {
         create("libs") {
-            from("com.rubensgomes:catalog:0.0.22")
+            from("com.rubensgomes:catalog:0.0.26")
         }
     }
 }

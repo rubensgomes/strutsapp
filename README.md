@@ -1,22 +1,6 @@
 # strutsapp
 A basic Kotlin Spring - Struts - JSP web application.
 
-## Import Local Repo to GitHub
-
-```shell
-PROJ="strutsapp"
-git init -b main
-git add .
-git commit -m "initial commit" -a
-gh repo create --homepage "https://github.com/rubensgomes" --private "${PROJ}"
-git remote add origin "https://github.com/rubensgomes/${PROJ}"
-git push -u origin main
-```
-
-Then, go to the [repo](https://github.com/rubensgomes/strutsapp) and create
-a `release` branch. Click on the `drop-down` to `View all branches` and click
-on the `New branch` button.
-
 ## Display Java Tools Installed
 
 ```shell
@@ -31,7 +15,7 @@ on the `New branch` button.
 ./gradlew --info clean
 ```
 
-### To run static analysis
+### To run Spotless static analysis
 
 ```shell
 ./gradlew :app:spotlessApply
@@ -43,16 +27,33 @@ on the `New branch` button.
 ./gradlew --info check
 ```
 
-### To create a Spring Boot executable jar
+### To assemble a Spring Boot war
 
 ```shell
-./gradlew --info bootJar
+./gradlew --info assemble
 ```
 
-### To run the Spring Boot application
+### To create a Spring Boot executable war
+
+```shell
+./gradlew --info bootWar
+```
+
+### To run the Spring Boot webapp from IntelliJ
+
+ATTENTION: You must select the Gradle task:
+- `strutsapp > Tasks > application > bootRun`
+
+### To run the Spring Boot webapp from the CLI
 
 ```shell
 ./gradlew --info bootRun
+```
+
+### To render the `Hello StrutsApp!` page
+
+```http request
+http://localhost:8080/index.do
 ```
 
 ### To create a realease (only Rubens Gomes)
