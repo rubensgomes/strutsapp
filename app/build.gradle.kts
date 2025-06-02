@@ -114,8 +114,4 @@ dependencies {
   // ########## testImplementation #############################################
   testImplementation("org.springframework.boot:spring-boot-starter-test")
   testImplementation("org.apache.struts:struts2-junit-plugin")
-  testImplementation(ctlg.bundles.kotlin.junit5)
-
-  // ########## testRuntimeOnly ################################################
-  testRuntimeOnly(ctlg.junit.platform.launcher)
 }
