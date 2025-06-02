@@ -1,6 +1,8 @@
 # strutsapp
 A basic Kotlin Spring - Struts - JSP web application.
 
+- Requires Java LTS 21 or greater.
+
 ## Display Java Tools Installed
 
 ```shell

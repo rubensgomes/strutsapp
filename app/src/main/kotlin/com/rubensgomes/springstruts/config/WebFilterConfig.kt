@@ -27,7 +27,6 @@ class WebFilterConfig {
     }
 
     internal companion object {
-        private val log: Logger =
-            LoggerFactory.getLogger(WebFilterConfig::class.java)
+        private val log: Logger = LoggerFactory.getLogger(WebFilterConfig::class.java)
     }
 }

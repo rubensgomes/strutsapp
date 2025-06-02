@@ -8,9 +8,8 @@ import org.springframework.boot.runApplication
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 /**
- * Spring Boot does not support JSP pages packaged as a jar. Since we are
- * redering JSP pages on this webapp we MUST package the webapp as a WAR
- * instead.
+ * Spring Boot does not support JSP pages packaged as a jar. Since we are redering JSP pages on this
+ * webapp we MUST package the webapp as a WAR instead.
  *
  * @author Rubens Gomes
  */

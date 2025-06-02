@@ -4,12 +4,12 @@ plugins {
   id("idea")
   id("version-catalog")
   id("war")
-  alias(libs.plugins.kotlin.jvm)
-  alias(libs.plugins.kotlin.spring)
-  alias(libs.plugins.release)
-  alias(libs.plugins.spotless)
-  alias(libs.plugins.spring.boot)
-  alias(libs.plugins.spring.dependency.management)
+  alias(ctlg.plugins.kotlin.jvm)
+  alias(ctlg.plugins.kotlin.spring)
+  alias(ctlg.plugins.release)
+  alias(ctlg.plugins.spotless)
+  alias(ctlg.plugins.spring.boot)
+  alias(ctlg.plugins.spring.dependency.management)
 }
 
 val group: String by project
@@ -92,14 +92,15 @@ dependencies {
 
   // ########## implementation #################################################
   implementation("org.springframework.boot:spring-boot-starter-web")
-  implementation(platform("org.apache.struts:struts2-bom:7.0.0-M9"))
+
+  implementation(platform("org.apache.struts:struts2-bom:${ctlg.versions.struts2.get()}"))
   implementation("org.apache.struts:struts2-core")
   implementation("org.apache.struts:struts2-convention-plugin")
   implementation("org.apache.commons:commons-lang3")
   // required by Spring Boot:
-  implementation(libs.kotlin.reflect)
-  implementation(libs.kotlin.stdlib)
-  implementation(libs.jackson.module.kotlin)
+  implementation(ctlg.kotlin.reflect)
+  implementation(ctlg.kotlin.stdlib)
+  implementation(ctlg.jackson.module.kotlin)
 
   // ########## providedRuntime ################################################
   providedRuntime("org.apache.tomcat.embed:tomcat-embed-jasper")
@@ -113,8 +114,8 @@ dependencies {
   // ########## testImplementation #############################################
   testImplementation("org.springframework.boot:spring-boot-starter-test")
   testImplementation("org.apache.struts:struts2-junit-plugin")
-  testImplementation(libs.bundles.kotlin.junit5)
+  testImplementation(ctlg.bundles.kotlin.junit5)
 
   // ########## testRuntimeOnly ################################################
-  testRuntimeOnly(libs.junit.platform.launcher)
+  testRuntimeOnly(ctlg.junit.platform.launcher)
 }

@@ -20,7 +20,6 @@ class WebMvcConfig : WebMvcConfigurer {
 
     internal companion object {
         private const val INDEX_PAGE_URL = "/index.do"
-        private val log: Logger =
-            LoggerFactory.getLogger(WebMvcConfig::class.java)
+        private val log: Logger = LoggerFactory.getLogger(WebMvcConfig::class.java)
     }
 }
