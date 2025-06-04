@@ -11,34 +11,30 @@ A basic Kotlin Spring - Struts - JSP web application.
 
 ## Clean, Lint, Test, Assemble, Release
 
-### To clean local build
-
 ```shell
 ./gradlew --info clean
 ```
-
-### To run Spotless static analysis
 
 ```shell
 ./gradlew :app:spotlessApply
 ```
 
-### To run unit tests
-
 ```shell
 ./gradlew --info check
 ```
-
-### To assemble a Spring Boot war
 
 ```shell
 ./gradlew --info assemble
 ```
 
-### To create a Spring Boot executable war
+```shell
+# To create a Spring Boot executable war
+./gradlew --info bootWar
+```
 
 ```shell
-./gradlew --info bootWar
+# only Rubens can push new releases
+./gradlew --info release
 ```
 
 ### To run the Spring Boot webapp from IntelliJ
@@ -58,8 +54,3 @@ ATTENTION: You must select the Gradle task:
 http://localhost:8080/index.do
 ```
 
-### To create a realease (only Rubens Gomes)
-
-```shell
-./gradlew --info release
-```
